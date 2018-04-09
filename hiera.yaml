@@ -1,0 +1,15 @@
+---
+version: 5
+defaults:
+  datadir: './hieradata'
+  data_hash: yaml_data
+
+hierarchy:
+  - name: "apply"
+    path:
+      - "nodes/%{trusted.certname}.yaml"
+      - "%{manufacturer}.yaml"
+      - "env/%{environment}.yaml"
+  - name: "Common data"
+    path: "default.yaml"
+
