@@ -4,8 +4,10 @@
 
 
 ## install neccessary submodules
+```
 git submodule init
 git submodule update
+```
 
 ## create your own module
 ```
