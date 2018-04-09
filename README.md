@@ -1,8 +1,19 @@
-# install neccessary submodules
+# puppet_apply_example
+
+### Example Repository for puppet apply modules
+
+
+## install neccessary submodules
 git submodule init
+
 git submodule update
 
-# create your own module "autodeploy"
+## create your own module
+mkdir -p modules/autodeploy/manifests
+>> modules/autodeploy/manifests/init.pp cat << EOF
+class autodeploy {
+}
+EOF
 
-#start
-puppet apply --modulepath ./puppetapply/modules/ --hiera_config ./puppetapply/hiera.yaml -e 'include autodeploy'
+#apply
+puppet apply --modulepath ./puppet_apply_example/modules/ --hiera_config ./puppet_apply_example/hiera.yaml -e 'include autodeploy'
