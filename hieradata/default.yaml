@@ -1,3 +1,4 @@
 ---
 autodeploy::information: 'apply ...'
+autodeploy::enable: true
 
